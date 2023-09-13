@@ -1,0 +1,18 @@
+import styled from '@emotion/styled';
+
+export const LayoutWrrap = styled.div`
+  max-width: 1200px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+`;
