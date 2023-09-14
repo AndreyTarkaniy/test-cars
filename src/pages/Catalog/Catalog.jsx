@@ -23,7 +23,6 @@ const Catalog = () => {
         } else setCars(prevState => [...prevState, ...data]);
 
         if (data.length < CarsService.limit) setTotalCars(true);
-        // console.log(data.length);
       } catch (error) {
         setError('Oops');
       } finally {
