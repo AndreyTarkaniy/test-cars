@@ -11,6 +11,7 @@ export const CardCars = ({
     address,
     mileage,
   },
+  openModal,
 }) => {
   return (
     <div>
@@ -34,7 +35,14 @@ export const CardCars = ({
         <li>{mileage}</li>
         <li>{functionalities[0]}</li>
       </ul>
-      <button type="button">Learn more</button>
+      <button
+        type="button"
+        onClick={() => {
+          openModal(true);
+        }}
+      >
+        Learn more
+      </button>
     </div>
   );
 };
