@@ -66,7 +66,7 @@ export const Modal = ({
       <ModalWindow>
         <Close onClick={onClick} />
         <ImgWrrap>
-          <Img src={img} alt={make} />
+          <Img src={img} alt={make} width={461} />
         </ImgWrrap>
 
         <Title>

@@ -43,7 +43,7 @@ export const CardCars = ({ data }) => {
   return (
     <CardWrrap>
       <ImgWrapp>
-        <Img src={img} alt={make} />
+        <Img src={img} alt={make} width={274} height={268} />
       </ImgWrapp>
 
       <TitleWrapp>
