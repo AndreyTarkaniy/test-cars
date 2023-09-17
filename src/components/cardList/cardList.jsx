@@ -1,13 +1,21 @@
+import PropTypes from 'prop-types';
+
 import { CardCars } from 'components/cardCar/cardCar';
+import { List } from './cardList.styled';
 
 export const CardList = ({ data, openModal }) => {
   return (
-    <ul>
+    <List>
       {data.map(car => (
         <li key={`${car.description} `} data={car}>
-          <CardCars data={car} openModal={openModal} />
+          <CardCars data={car} openModal={openModal} relode={false} />
         </li>
       ))}
-    </ul>
+    </List>
   );
+};
+
+CardList.propTypes = {
+  data: PropTypes.array.isRequired,
+  openModal: PropTypes.func,
 };

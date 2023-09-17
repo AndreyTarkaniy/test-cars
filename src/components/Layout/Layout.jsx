@@ -1,23 +1,17 @@
-import { NavLink, Outlet } from 'react-router-dom';
-// import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import { LayoutWrrap } from './Layout.styled';
-
-// import css from 'layout/Layout/layout.module.css';
-// import { Header } from '../Header/Header';
+import { Header } from 'components/header/header';
 
 const Layout = () => {
   return (
     <LayoutWrrap>
-      {/* <Header /> */}
-      <header>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/catalog">Catalog</NavLink>
-        <NavLink to="/favorites">Favorite</NavLink>
-      </header>
+      <Header />
+
       <main>
-        {/* <Suspense fallback={<div>Loading...</div>}> */}
-        <Outlet />
-        {/* </Suspense> */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </main>
     </LayoutWrrap>
   );

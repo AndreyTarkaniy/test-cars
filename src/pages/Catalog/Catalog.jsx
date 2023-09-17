@@ -3,11 +3,10 @@ import { useEffect } from 'react';
 
 import * as CarsService from 'api/carsService';
 import { CardList } from 'components/cardList/cardList';
-import { Modal } from 'components/modal/modal';
+import { Button } from './Cataloge.styled';
 
 const Catalog = () => {
   const [page, setPage] = useState(1);
-  const [modalWindow, setModalWindow] = useState(false);
 
   const [cars, setCars] = useState([]);
   const [totalCars, setTotalCars] = useState(null);
@@ -40,24 +39,17 @@ const Catalog = () => {
     setPage(prevPage => prevPage + 1);
   };
 
-  const openModal = () => {
-    setModalWindow(true);
-  };
-  const closeModal = () => {
-    setModalWindow(null);
-  };
-
   return (
     <div>
       {isLoading && <div>Loading...</div>}
       <h1>Catalog</h1>
-      <CardList data={cars} openModal={openModal} />
+
+      <CardList data={cars} />
       {!totalCars && (
-        <button type="button" onClick={incrementPage}>
+        <Button type="button" onClick={incrementPage}>
           Load more
-        </button>
+        </Button>
       )}
-      {modalWindow && <Modal onClick={closeModal} />}
     </div>
   );
 };
