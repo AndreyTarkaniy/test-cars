@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktest_cars=self.webpackChunktest_cars||[]).push([[544],{544:function(e,s,t){t.r(s);var c=t(184);s.default=function(){return(0,c.jsx)("div",{children:(0,c.jsx)("h1",{children:"Home"})})}}}]);
+//# sourceMappingURL=544.d195fde2.chunk.js.map
